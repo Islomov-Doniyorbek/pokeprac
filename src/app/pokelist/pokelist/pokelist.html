@@ -1,7 +1,7 @@
 <div class="w-full flex justify-center py-6">
     <div class="pokeGrid w-5xl grid grid-cols-3 gap-4">
 
-      <div class="ttop flex flex-col justify-between col-span-1 shadow-2xl shadow-[#7b7b7ba6] bg-white h-126 rounded-2xl">
+      <!-- <div class="ttop flex flex-col justify-between col-span-1 shadow-2xl shadow-[#7b7b7ba6] bg-white h-126 rounded-2xl">
         <div class=" w-full flex justify-end py-2 px-3">
           <span class="mt-4 px-4 py-1 rounded-2xl text-sm bg-white">ID: <b>1</b></span>
         </div>
@@ -70,7 +70,7 @@
           <span class="mt-4 px-4 py-1 rounded-2xl text-sm bg-white">ID: <b>1</b></span>
         </div>
         <div class="hero flex items-center flex-col gap-y-5">
-          <img class="w-4/5" src="https://images.unsplash.com/photo-1780369088774-b6944e7ec5b5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="aaa">
+          <img class="w-4/5" src="https://pokeapi.co/api/v2/ability/65/" alt="aaa">
           <h3 class="font-semibold text-lg">Ananas</h3>
         </div>
         <div class="flex flex-col items-center gap-y-3 py-5">
@@ -96,7 +96,44 @@
           </div>
           <button class="px-3 py-1 rounded-2xl bg-green-500 font-semibold text-white" [routerLink]="['/', 1]">Show more</button>
         </div>
+      </div> -->
+      @for (item of pokeAbility; track item.id) {
+        <div class="ttop flex flex-col justify-between col-span-1 shadow-2xl shadow-[#7b7b7ba6] bg-white h-126 rounded-2xl">
+        <div class=" w-full flex justify-end py-2 px-3">
+          <span class="mt-4 px-4 py-1 rounded-2xl text-sm bg-white">ID: <b>{{item.id}}</b></span>
+        </div>
+        <div class="hero flex items-center flex-col gap-y-5">
+            <img
+                class="w-4/5"
+                [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + item.id + '.png'"
+                alt="pokemon"
+            />
+          <h3 class="font-semibold text-lg">{{item.title}}</h3>
+        </div>
+        <div class="flex flex-col items-center gap-y-3 py-5">
+          <div class="characters w-full flex justify-between px-5">
+            <div class="col">
+              <div class="flex flex-col gap-y-0.5 items-center">
+                <b>{{item.height}}</b>
+                <span>Height</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="flex flex-col gap-y-0.5 items-center">
+                <b>{{item.base_experience}}</b>
+                <span>Experience</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="flex flex-col gap-y-0.5 items-center">
+                <b>{{item.order}}</b>
+                <span>Order</span>
+              </div>
+            </div>
+          </div>
+          <button class="px-3 py-1 rounded-2xl bg-green-500 font-semibold text-white" [routerLink]="['/', 1]">Show more</button>
+        </div>
       </div>
-      
+      }
     </div>
   </div>
