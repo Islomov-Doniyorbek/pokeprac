@@ -1,0 +1,33 @@
+.ttop {
+    position: relative;
+    overflow: hidden;
+    /* transition: 0.9s ; */
+}
+.ttop * {
+    z-index: 1;
+}
+.ttop::after{
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    background: gold;
+    top: -60%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.pokeGrid:hover .ttop {
+    /* opacity: .2; */
+    filter: blur(2px);
+    transition: .9s;
+}
+
+.pokeGrid .ttop:hover {
+    transform: scale(1.01);
+    /* opacity: 1; */
+    filter: blur(0);
+    transition: .9s;
+}
