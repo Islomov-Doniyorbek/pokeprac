@@ -23,6 +23,7 @@ export interface PokeAbilities {
   special_attacks: number;
   special_defence: number;
   speed: number;
+  img: string
 }
 
 
@@ -38,4 +39,7 @@ export interface PokeDetails {
   stats: {
     base_stat: number;
   }[];
+  sprites: {
+    front_default: string
+  }
 }

@@ -38,6 +38,7 @@ export class PokeDetails implements OnInit {
           special_attacks: data.stats[3].base_stat,
           special_defence: data.stats[4].base_stat,
           speed: data.stats[5].base_stat,
+          img: data.sprites.front_default
         }
 
         this.cdr.detectChanges();

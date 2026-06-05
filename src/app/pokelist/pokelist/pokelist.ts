@@ -39,6 +39,7 @@ export class Pokelist implements OnInit {
         this.pokeAbility = details.map(detail => ({
           id: detail.id,
           order: detail.order,
+          img:detail.sprites.front_default,
           base_experience: detail.base_experience,
           title: detail.species.name,
           height: detail.height,

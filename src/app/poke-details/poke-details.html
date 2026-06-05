@@ -2,7 +2,7 @@
     @if (pokeDetails) {
         <div class="card w-4/5 flex ">
         <div class="w-2/5 flex items-center justify-center">
-            <img class="scale-300" [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + pokeDetails.id + '.png'"
+            <img class="scale-200" [src]="pokeDetails.img"
                 alt="poke">
         </div>
         <div class="w-3/5">
