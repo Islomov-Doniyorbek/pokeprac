@@ -1,1 +1,31 @@
-<p>poke-details works!</p>
+<div class="mt-6 w-full flex justify-center">
+    @if (pokeDetails) {
+        <div class="card w-4/5 flex ">
+        <div class="w-2/5 flex items-center justify-center">
+            <img class="scale-300" [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + pokeDetails.id + '.png'"
+                alt="poke">
+        </div>
+        <div class="w-3/5">
+            <ul class="space-y-1.5">
+                <li>ID: {{pokeDetails.id}}</li>
+                <li>ID: {{pokeDetails.title | titlecase}}</li>
+                <li>ID: {{pokeDetails.height}}</li>
+                <li>ID: {{pokeDetails.weight}}</li>
+                <li>Some stats:
+                </li>
+                <li>
+                    <span class="px-2 py-1 rounded-2xl text-sm font-semibold mx-1 text-white bg-emerald-600">hp: {{pokeDetails.hp}} </span>
+                    <span class="px-2 py-1 rounded-2xl text-sm font-semibold mx-1 text-white bg-emerald-600">attacks: {{pokeDetails.attacks}} </span>
+                    <span class="px-2 py-1 rounded-2xl text-sm font-semibold mx-1 text-white bg-emerald-600">defence: {{pokeDetails.defence}} </span>
+                    <span class="px-2 py-1 rounded-2xl text-sm font-semibold mx-1 text-white bg-emerald-600">special attacks: {{pokeDetails.special_attacks}} </span>
+                    <span class="px-2 py-1 rounded-2xl text-sm font-semibold mx-1 text-white bg-emerald-600">special defence: {{pokeDetails.special_defence}} </span>
+                    <span class="px-2 py-1 rounded-2xl text-sm font-semibold mx-1 text-white bg-emerald-600">speed: {{pokeDetails.speed}} </span>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    }@else {
+        <p class="text-red-600 font-semibold text-4xl">Poke ma'lumotlari topilmadi!</p>
+    }
+</div>

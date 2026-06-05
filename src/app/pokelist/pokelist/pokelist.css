@@ -21,7 +21,7 @@
 
 .pokeGrid:hover .ttop {
     /* opacity: .2; */
-    filter: blur(2px);
+    filter: blur(1px);
     transition: .9s;
 }
 
