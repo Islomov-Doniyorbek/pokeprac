@@ -1,5 +1,8 @@
 <div class="w-full flex justify-center py-6">
-    <div class="pokeGrid w-5xl grid grid-cols-3 gap-4">
+    @if(isLoading){
+      <div class="loader"></div>
+    }@else {
+      <div class="pokeGrid w-5xl grid grid-cols-3 gap-4">
 
       <!-- <div class="ttop flex flex-col justify-between col-span-1 shadow-2xl shadow-[#7b7b7ba6] bg-white h-126 rounded-2xl">
         <div class=" w-full flex justify-end py-2 px-3">
@@ -136,4 +139,5 @@
       </div>
       }
     </div>
+    }
   </div>
